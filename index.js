@@ -48,11 +48,11 @@ const removeBlockComments = (str) => {
 }
 
 
-fs.readFile("test.js", (err, data) => {
+fs.readFile('comments.js', (err, data) => {
     if(err) throw err;
     let str = data.toString();
     str = removeBlockComments(str)
-    str = str.split("\n")
+    str = str.split('\n')
     str = str.map( str => {
        return removeLineComments(str);
     })
